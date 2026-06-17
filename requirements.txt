@@ -1,0 +1,23 @@
+# Core training / inference stack (local: Python 3.10, CUDA, 2x RTX 5000 Ada).
+# Versions are the ones used; loosen as needed.
+numpy>=1.26,<2.1
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.3
+librosa>=0.10
+soundfile>=0.12
+tqdm>=4.66
+
+# Models
+torch>=2.2
+torchaudio>=2.2
+timm>=0.9            # tf_efficientnetv2_s.in21k_ft_in1k, tf_efficientnet_b0.ns_jft_in1k
+lightgbm>=4.0        # class-specific probes
+
+# ONNX export + CPU inference (Kaggle scoring env used these exact pins)
+onnx>=1.16
+onnxscript>=0.1
+onnxruntime==1.24.4
+
+# Perch v2 embedding teacher
+tensorflow==2.20.0

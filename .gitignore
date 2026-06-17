@@ -1,0 +1,31 @@
+# --- Heavy artifacts (kept locally / via dataset hosting, not in git) ---
+# Model checkpoints (the one shipped model lives in models/ via Git LFS)
+*.pt
+*.pth
+*.ckpt
+# OOF arrays, embeddings, caches
+*.npy
+*.npz
+*.parquet
+# Intermediate prediction CSVs (hundreds of MB each)
+submission*.csv
+subm_*.csv
+oof_*.csv
+# Logs / run outputs
+*.log
+cache/
+*_out/
+*_smoke/
+
+# --- Windows "downloaded from internet" metadata ---
+*:Zone.Identifier
+*Zone.Identifier*
+
+# --- Python ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+
+# Note: models/*.onnx is intentionally tracked (see .gitattributes / Git LFS).
